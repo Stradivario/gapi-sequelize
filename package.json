@@ -1,0 +1,31 @@
+{
+  "name": "gapi-sequelize",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stradivario/gapi-sequelize.git"
+  },
+  "author": {
+    "name": "Kristian Tachev(Stradivario)",
+    "email": "kristiqn.tachev@gmail.com"
+  },
+  "keywords": [
+    "graphql",
+    "gapi",
+    "node"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "http://gitlab.youvolio.com/gapi/gapi-sequelize/issues"
+  },
+  "module": "gapi-sequelize-module.js",
+  "typings": "gapi-sequelize-module.d.ts",
+  "peerDependencies": {
+    "gapi": "github:Stradivario/gapi",
+    "rxjs": "^5.5.6"
+  },
+  "dependencies": {
+    "sequelize": "^4.35.2",
+    "sequelize-typescript": "^0.6.2"
+  }
+}
