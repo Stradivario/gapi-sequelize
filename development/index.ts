@@ -1,4 +1,4 @@
-import { GapiModule, Container, Token } from "gapi";
+import { GapiModule, Container, Token } from "@gapi/core";
 import { GapiSequelizeService } from "./sequelize.service";
 import { SequelizeConfigService } from './sequelize-config.service';
 import { SequelizeConfig } from "./sequelize.interface";

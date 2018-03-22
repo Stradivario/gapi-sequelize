@@ -1,4 +1,4 @@
-# @Gapi Sequelize
+# @Gapi/Sequelize
 
 ![Build Status](http://gitlab.youvolio.com/gapi/gapi/badges/branch/build.svg)
 
@@ -11,7 +11,7 @@
 ##### To install this Gapi module, run:
 
 ```bash
-$ npm install Stradivario/gapi-sequelize --save
+$ npm install @gapi/sequelize --save
 ```
 
 ## Consuming gapi-sequelize
@@ -20,7 +20,7 @@ $ npm install Stradivario/gapi-sequelize --save
 ```typescript
 
 import { GapiModule } from '@gapi/core';
-import { SequelizeModule } from 'gapi-sequelize';
+import { SequelizeModule } from '@gapi/sequelize';
 
 @GapiModule({
     imports: [
@@ -101,7 +101,7 @@ export class User extends Model<User> {
 ##### Final use this class inside your services the following way
 
 ```typescript
-import { Service } from "gapi";
+import { Service } from "@gapi/core";
 import { UserType } from "../types/user.type";
 import { User } from '../../../models/User';
 

@@ -9,17 +9,17 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-const gapi_1 = require("gapi");
+const core_1 = require("@gapi/core");
 const sequelize_service_1 = require("./sequelize.service");
 const sequelize_config_service_1 = require("./sequelize-config.service");
 let SequelizeModule = SequelizeModule_1 = class SequelizeModule {
     static forRoot(config) {
-        Object.assign(gapi_1.Container.get(sequelize_config_service_1.SequelizeConfigService), config);
+        Object.assign(core_1.Container.get(sequelize_config_service_1.SequelizeConfigService), config);
         return SequelizeModule_1;
     }
 };
 SequelizeModule = SequelizeModule_1 = __decorate([
-    gapi_1.GapiModule({
+    core_1.GapiModule({
         services: [
             sequelize_service_1.GapiSequelizeService,
             sequelize_config_service_1.SequelizeConfigService
