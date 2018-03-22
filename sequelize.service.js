@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const gapi_1 = require("gapi");
+const core_1 = require("@gapi/core");
 const sequelize_typescript_1 = require("sequelize-typescript");
 const sequelize_config_service_1 = require("./sequelize-config.service");
 let GapiSequelizeService = class GapiSequelizeService {
@@ -23,7 +23,7 @@ let GapiSequelizeService = class GapiSequelizeService {
     }
 };
 GapiSequelizeService = __decorate([
-    gapi_1.Service(),
+    core_1.Service(),
     __metadata("design:paramtypes", [sequelize_config_service_1.SequelizeConfigService])
 ], GapiSequelizeService);
 exports.GapiSequelizeService = GapiSequelizeService;

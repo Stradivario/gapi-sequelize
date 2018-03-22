@@ -1,4 +1,4 @@
-import { Service, Injector, Container } from 'gapi';
+import { Service, Injector, Container } from '@gapi/core';
 import { Sequelize } from 'sequelize-typescript';
 import { SequelizeConfigService } from './sequelize-config.service';
 

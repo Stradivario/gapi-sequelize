@@ -1,4 +1,4 @@
-import { Service } from "gapi";
+import { Service } from "@gapi/core";
 import { SequelizeConfig } from "./sequelize.interface";
 
 @Service()

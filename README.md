@@ -19,7 +19,7 @@ $ npm install Stradivario/gapi-sequelize --save
 ##### Import inside AppModule or CoreModule
 ```typescript
 
-import { GapiModule } from 'gapi';
+import { GapiModule } from '@gapi/core';
 import { SequelizeModule } from 'gapi-sequelize';
 
 @GapiModule({
@@ -147,7 +147,7 @@ export class UserService {
 #### Advanced getting sequelize instance to manage your sequelize connection
 
 ```typescript 
-import { Service } from 'gapi';
+import { Service } from '@gapi/core';
 import { GapiSequelizeService } from 'gapi-sequelize';
 
 @Service()
@@ -174,7 +174,7 @@ export class SequelizePrivateService extends GapiSequelizeService implements Gap
 #### Next import SequelizePrivateService inside Core or AppModule
 
 ```typescript
-import { GapiModule } from 'gapi';
+import { GapiModule } from '@gapi/core';
 import { SequelizeModule } from 'gapi-sequelize';
 import { SequelizePrivateService } from './services/sequelize/sequelize.service.ts';
 
