@@ -12,22 +12,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@gapi/core");
 const sequelize_service_1 = require("./sequelize.service");
 const sequelize_config_service_1 = require("./sequelize-config.service");
-let SequelizeModule = SequelizeModule_1 = class SequelizeModule {
+let GapiSequelizeModule = GapiSequelizeModule_1 = class GapiSequelizeModule {
     static forRoot(config) {
         Object.assign(core_1.Container.get(sequelize_config_service_1.SequelizeConfigService), config);
-        return SequelizeModule_1;
+        return GapiSequelizeModule_1;
     }
 };
-SequelizeModule = SequelizeModule_1 = __decorate([
+GapiSequelizeModule = GapiSequelizeModule_1 = __decorate([
     core_1.GapiModule({
         services: [
             sequelize_service_1.GapiSequelizeService,
             sequelize_config_service_1.SequelizeConfigService
         ]
     })
-], SequelizeModule);
-exports.SequelizeModule = SequelizeModule;
+], GapiSequelizeModule);
+exports.GapiSequelizeModule = GapiSequelizeModule;
 __export(require("./sequelize.service"));
 __export(require("./sequelize.interface"));
 __export(require("./sequelize-config.service"));
-var SequelizeModule_1;
+var GapiSequelizeModule_1;

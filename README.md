@@ -20,11 +20,11 @@ $ npm install @gapi/sequelize --save
 ```typescript
 
 import { GapiModule } from '@gapi/core';
-import { SequelizeModule } from '@gapi/sequelize';
+import { GapiSequelizeModule } from '@gapi/sequelize';
 
 @GapiModule({
     imports: [
-        SequelizeModule.forRoot({
+        GapiSequelizeModule.forRoot({
             dialect: 'postgres',
             host: process.env.DB_HOST || '',
             port: process.env.DB_PORT || '5432',

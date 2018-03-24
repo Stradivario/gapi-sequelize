@@ -9,10 +9,10 @@ import { SequelizeConfig } from "./sequelize.interface";
         SequelizeConfigService
     ]
 })
-export class SequelizeModule {
+export class GapiSequelizeModule {
     static forRoot(config: SequelizeConfig) {
         Object.assign(Container.get(SequelizeConfigService), config);
-        return SequelizeModule;
+        return GapiSequelizeModule;
     }
 }
 

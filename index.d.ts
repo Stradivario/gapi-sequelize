@@ -1,6 +1,6 @@
 import { SequelizeConfig } from "./sequelize.interface";
-export declare class SequelizeModule {
-    static forRoot(config: SequelizeConfig): typeof SequelizeModule;
+export declare class GapiSequelizeModule {
+    static forRoot(config: SequelizeConfig): typeof GapiSequelizeModule;
 }
 export * from './sequelize.service';
 export * from './sequelize.interface';
