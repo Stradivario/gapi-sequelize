@@ -148,7 +148,7 @@ export class UserService {
 
 ```typescript 
 import { Service } from '@gapi/core';
-import { GapiSequelizeService } from 'gapi-sequelize';
+import { GapiSequelizeService } from '@gapi/sequelize';
 
 @Service()
 export class SequelizePrivateService extends GapiSequelizeService implements GapiSequelizeService {
@@ -175,7 +175,7 @@ export class SequelizePrivateService extends GapiSequelizeService implements Gap
 
 ```typescript
 import { GapiModule } from '@gapi/core';
-import { SequelizeModule } from 'gapi-sequelize';
+import { SequelizeModule } from '@gapi/sequelize';
 import { SequelizePrivateService } from './services/sequelize/sequelize.service.ts';
 
 @GapiModule({
