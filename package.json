@@ -1,6 +1,6 @@
 {
   "name": "@gapi/sequelize",
-  "version": "0.7.12",
+  "version": "0.7.13",
   "repository": {
     "type": "git",
     "url": "https://github.com/Stradivario/gapi-sequelize.git"
@@ -21,11 +21,13 @@
   "module": "gapi-sequelize-module.js",
   "typings": "gapi-sequelize-module.d.ts",
   "peerDependencies": {
-    "rxjs": "^5.5.6"
+    "@gapi/core": "^0.7.13"
   },
   "dependencies": {
-    "@gapi/core": "^0.5.2",
     "sequelize": "^4.35.2",
     "sequelize-typescript": "^0.6.2"
+  },
+  "devDependencies": {
+    "@gapi/core": "^0.7.13"
   }
 }
