@@ -6,7 +6,7 @@
     "url": "https://github.com/Stradivario/gapi-sequelize.git"
   },
   "scripts": {
-    "postpublish": "git push ssh://git@gitlab.youvolio.com:522/gapi/gapi-sequelize.git"
+    "postpublish": "git push ssh://git@gitlab.youvolio.com:522/gapi/gapi-sequelize.git && git push --tags && git push ssh://git@gitlab.youvolio.com:522/gapi/gapi-sequelize.git --tags"
   },
   "author": {
     "name": "Kristian Tachev(Stradivario)",
