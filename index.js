@@ -14,10 +14,9 @@ const sequelize_service_1 = require("./sequelize.service");
 const sequelize_config_service_1 = require("./sequelize-config.service");
 let GapiSequelizeModule = GapiSequelizeModule_1 = class GapiSequelizeModule {
     static forRoot(config) {
-        Object.assign(core_1.Container.get(sequelize_config_service_1.SequelizeConfigService), config);
         return {
             gapiModule: GapiSequelizeModule_1,
-            services: [sequelize_config_service_1.SequelizeConfigService]
+            services: [{ provide: sequelize_config_service_1.SequelizeConfigService, useValue: config }]
         };
     }
 };
