@@ -16,15 +16,15 @@ let GapiSequelizeModule = GapiSequelizeModule_1 = class GapiSequelizeModule {
     static forRoot(config) {
         return {
             gapiModule: GapiSequelizeModule_1,
-            services: [{ provide: sequelize_config_service_1.SequelizeConfigService, useValue: config }]
+            services: [
+                { provide: sequelize_config_service_1.SequelizeConfigService, useValue: config }
+            ]
         };
     }
 };
 GapiSequelizeModule = GapiSequelizeModule_1 = __decorate([
     core_1.GapiModule({
-        services: [
-            sequelize_service_1.GapiSequelizeService,
-        ]
+        services: [sequelize_service_1.GapiSequelizeService]
     })
 ], GapiSequelizeModule);
 exports.GapiSequelizeModule = GapiSequelizeModule;

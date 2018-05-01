@@ -4,15 +4,15 @@ import { SequelizeConfigService } from './sequelize-config.service';
 import { SequelizeConfig } from "./sequelize.interface";
 
 @GapiModule({
-    services: [
-        GapiSequelizeService,
-    ]
+    services: [GapiSequelizeService]
 })
 export class GapiSequelizeModule {
     public static forRoot(config: SequelizeConfig): GapiModuleWithServices {
         return {
             gapiModule: GapiSequelizeModule,
-            services: [{provide: SequelizeConfigService, useValue: config}]
+            services: [
+                { provide: SequelizeConfigService, useValue: config }
+            ]
         };
     }
 }
