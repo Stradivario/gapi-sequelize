@@ -29,7 +29,7 @@ let GapiSequelizeModule = GapiSequelizeModule_1 = class GapiSequelizeModule {
                     provide: sequelize_service_1.GapiSequelizeService,
                     useFactory: () => __awaiter(this, void 0, void 0, function* () {
                         const sequelize = new sequelize_typescript_1.Sequelize(config);
-                        yield sequelize.sync();
+                        yield sequelize.sync({ force: config.force, logging: config.logging });
                         return sequelize;
                     })
                 }

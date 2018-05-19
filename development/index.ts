@@ -16,7 +16,7 @@ export class GapiSequelizeModule {
                     provide: GapiSequelizeService,
                     useFactory: async () => {
                         const sequelize = new Sequelize(<any>config);
-                        await sequelize.sync();
+                        await sequelize.sync({ force: config.force, logging: config.logging });
                         return sequelize;
                     }
                 }
