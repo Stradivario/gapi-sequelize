@@ -2,6 +2,7 @@ import { GapiModule, Container, Token, GapiModuleWithServices } from "@gapi/core
 import { GapiSequelizeService } from "./sequelize.service";
 import { SequelizeConfigService } from './sequelize-config.service';
 import { SequelizeConfig } from "./sequelize.interface";
+import { Sequelize } from "sequelize-typescript";
 
 @GapiModule({
     services: [GapiSequelizeService]
@@ -11,7 +12,14 @@ export class GapiSequelizeModule {
         return {
             gapiModule: GapiSequelizeModule,
             services: [
-                { provide: SequelizeConfigService, useValue: config }
+                {
+                    provide: GapiSequelizeService,
+                    useFactory: async () => {
+                        const sequelize = new Sequelize(<any>config);
+                        await sequelize.sync();
+                        return sequelize;
+                    }
+                }
             ]
         };
     }
