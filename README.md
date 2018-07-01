@@ -19,12 +19,12 @@ $ npm install @gapi/sequelize --save
 ##### Import inside AppModule or CoreModule
 ```typescript
 
-import { GapiModule } from '@gapi/core';
-import { GapiSequelizeModule } from '@gapi/sequelize';
+import { Module } from '@rxdi/core';
+import { SequelizeModule } from '@gapi/sequelize';
 
-@GapiModule({
+@Module({
     imports: [
-        GapiSequelizeModule.forRoot({
+        SequelizeModule.forRoot({
             dialect: 'postgres',
             host: process.env.DB_HOST || '',
             port: process.env.DB_PORT || '5432',
@@ -101,7 +101,7 @@ export class User extends Model<User> {
 ##### Final use this class inside your services the following way
 
 ```typescript
-import { Service } from "@gapi/core";
+import { Service } from "@rxdi/core";
 import { UserType } from "../types/user.type";
 import { User } from '../../../models/User';
 
@@ -142,16 +142,14 @@ export class UserService {
 
 ```
 
-
-
 #### Advanced getting sequelize instance to manage your sequelize connection
 
 ```typescript 
-import { Service } from '@gapi/core';
-import { GapiSequelizeService } from '@gapi/sequelize';
+import { Service } from '@rxdi/core';
+import { SequelizeService } from '@gapi/sequelize';
 
 @Service()
-export class SequelizePrivateService extends GapiSequelizeService implements GapiSequelizeService {
+export class SequelizePrivateService extends SequelizeService implements SequelizeService {
     sequelize: Sequelize;
     constructor() {
         super({
@@ -174,14 +172,12 @@ export class SequelizePrivateService extends GapiSequelizeService implements Gap
 #### Next import SequelizePrivateService inside Core or AppModule
 
 ```typescript
-import { GapiModule } from '@gapi/core';
+import { Module } from '@rxdi/core';
 import { SequelizeModule } from '@gapi/sequelize';
 import { SequelizePrivateService } from './services/sequelize/sequelize.service.ts';
 
-@GapiModule({
-    services: [
-        SequelizePrivateService
-    ]
+@Module({
+    services: [SequelizePrivateService]
 })
 export class CoreModule { }
 

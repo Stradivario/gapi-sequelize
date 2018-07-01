@@ -1,9 +1,3 @@
-import { Service } from "@gapi/core";
-import { SequelizeConfig } from "./sequelize.interface";
+import { InjectionToken } from "@rxdi/core/container/Token";
 
-@Service()
-export class SequelizeConfigService extends SequelizeConfig {
-    constructor() {
-        super();
-    }
-}
+export const SEQUELIZE = new InjectionToken('gapi-sequelize-config-token');

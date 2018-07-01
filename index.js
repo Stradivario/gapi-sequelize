@@ -17,16 +17,17 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@gapi/core");
-const sequelize_service_1 = require("./sequelize.service");
+const core_1 = require("@rxdi/core");
 const sequelize_typescript_1 = require("sequelize-typescript");
-let GapiSequelizeModule = GapiSequelizeModule_1 = class GapiSequelizeModule {
+const sequelize_config_service_1 = require("./sequelize-config.service");
+let SequelizeModule = SequelizeModule_1 = class SequelizeModule {
     static forRoot(config) {
         return {
-            gapiModule: GapiSequelizeModule_1,
+            module: SequelizeModule_1,
             services: [
                 {
-                    provide: sequelize_service_1.GapiSequelizeService,
+                    provide: sequelize_config_service_1.SEQUELIZE,
+                    lazy: true,
                     useFactory: () => __awaiter(this, void 0, void 0, function* () {
                         const sequelize = new sequelize_typescript_1.Sequelize(config);
                         yield sequelize.sync({ force: config.force, logging: config.logging });
@@ -37,13 +38,10 @@ let GapiSequelizeModule = GapiSequelizeModule_1 = class GapiSequelizeModule {
         };
     }
 };
-GapiSequelizeModule = GapiSequelizeModule_1 = __decorate([
-    core_1.GapiModule({
-        services: [sequelize_service_1.GapiSequelizeService]
-    })
-], GapiSequelizeModule);
-exports.GapiSequelizeModule = GapiSequelizeModule;
-__export(require("./sequelize.service"));
+SequelizeModule = SequelizeModule_1 = __decorate([
+    core_1.Module()
+], SequelizeModule);
+exports.SequelizeModule = SequelizeModule;
 __export(require("./sequelize.interface"));
 __export(require("./sequelize-config.service"));
-var GapiSequelizeModule_1;
+var SequelizeModule_1;

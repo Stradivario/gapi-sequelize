@@ -1,4 +1,2 @@
-import { SequelizeConfig } from "./sequelize.interface";
-export declare class SequelizeConfigService extends SequelizeConfig {
-    constructor();
-}
+import { InjectionToken } from "@rxdi/core/container/Token";
+export declare const SEQUELIZE: InjectionToken<{}>;
