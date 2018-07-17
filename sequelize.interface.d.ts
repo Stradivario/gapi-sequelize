@@ -8,6 +8,7 @@ export declare class SequelizeConfig {
     storage?: string;
     logging?: boolean;
     modelPaths?: string[];
+    models?: any[];
     force?: boolean;
     modifyFunctions?: {
         sync?: () => {};

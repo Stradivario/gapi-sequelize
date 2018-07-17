@@ -30,6 +30,7 @@ let SequelizeModule = SequelizeModule_1 = class SequelizeModule {
                     lazy: true,
                     useFactory: () => __awaiter(this, void 0, void 0, function* () {
                         const sequelize = new sequelize_typescript_1.Sequelize(config);
+                        sequelize.addModels(config.models);
                         yield sequelize.sync({ force: config.force, logging: config.logging });
                         return sequelize;
                     })

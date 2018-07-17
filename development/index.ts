@@ -14,6 +14,7 @@ export class SequelizeModule {
                     lazy: true,
                     useFactory: async () => {
                         const sequelize = new Sequelize(<any>config);
+                        sequelize.addModels(config.models);
                         await sequelize.sync({ force: config.force, logging: config.logging });
                         return sequelize;
                     }
