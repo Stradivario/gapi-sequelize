@@ -17,6 +17,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 Object.defineProperty(exports, "__esModule", { value: true });
+var SequelizeModule_1;
 const core_1 = require("@rxdi/core");
 const sequelize_typescript_1 = require("sequelize-typescript");
 const sequelize_config_service_1 = require("./sequelize-config.service");
@@ -45,4 +46,3 @@ SequelizeModule = SequelizeModule_1 = __decorate([
 exports.SequelizeModule = SequelizeModule;
 __export(require("./sequelize.interface"));
 __export(require("./sequelize-config.service"));
-var SequelizeModule_1;

@@ -24,8 +24,8 @@
   "module": "gapi-sequelize-module.js",
   "typings": "gapi-sequelize-module.d.ts",
   "dependencies": {
-    "sequelize": "^4.35.2",
-    "sequelize-typescript": "^0.6.2"
+    "sequelize": "^4.42.0",
+    "sequelize-typescript": "^0.6.6"
   },
   "devDependencies": {
     "@rxdi/core": "^0.0.341"
