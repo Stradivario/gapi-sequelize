@@ -1,2 +1,2 @@
-import { InjectionToken } from "@rxdi/core/container/Token";
+import { InjectionToken } from "@rxdi/core";
 export declare const SEQUELIZE: InjectionToken<{}>;
