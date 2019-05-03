@@ -1,15 +1,17 @@
+import { SequelizeOptions } from "sequelize-typescript";
+import { Dialect } from "sequelize/types";
 
-export class SequelizeConfig {
-    dialect?: string;
+export class SequelizeConfig implements SequelizeOptions {
+    dialect?: Dialect;
     host?: string;
-    port?: string;
+    port?: number;
     username?: string;
     password?: string;
-    name?: string;
     storage?: string;
     logging?: boolean;
     modelPaths?: string[];
     models?: any[];
+    database?: string;
     force?: boolean;
     modifyFunctions?: {
         sync?: () => {}

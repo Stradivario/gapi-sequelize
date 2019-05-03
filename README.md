@@ -1,6 +1,6 @@
 # @Gapi/Sequelize
 
-![Build Status](http://gitlab.youvolio.com/gapi/gapi/badges/branch/build.svg)
+<!-- ![Build Status](http://gitlab.youvolio.com/gapi/gapi/badges/branch/build.svg) -->
 
 #### @Gapi Sequelize module @StrongTyped
 
@@ -27,10 +27,10 @@ import { SequelizeModule } from '@gapi/sequelize';
         SequelizeModule.forRoot({
             dialect: 'postgres',
             host: process.env.DB_HOST || '',
-            port: process.env.DB_PORT || '5432',
+            port: process.env.DB_PORT || 5432,
             username: process.env.DB_USERNAME || '',
             password: process.env.DB_PASSWORD || '',
-            name: process.env.DB_NAME || 'your-database',
+            database: process.env.DB_NAME || 'your-database',
             storage: ':memory:',
             logging: false,
             modelPaths: [process.cwd() + '/src/models'],
@@ -119,7 +119,7 @@ export class UserService {
     ) { }
 
     async findUser(id: number): Promise<User> {
-        return await User.find({ where: { id: id } });
+        return await User.findOne({ where: { id: id } });
     }
 
     async addUser(user: User): Promise<User> {
