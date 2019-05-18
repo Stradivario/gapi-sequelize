@@ -30,6 +30,6 @@
     "sequelize-typescript": "^1.0.0-beta.3"
   },
   "devDependencies": {
-    "@rxdi/core": "0.2.22"
+    "@rxdi/core": "0.2.24"
   }
 }
