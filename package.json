@@ -10,7 +10,9 @@
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
-    "postpublish": "git push -f ssh://git@gitlab.youvolio.com:522/gapi/gapi-sequelize.git && git push --tags && git push ssh://git@gitlab.youvolio.com:522/gapi/gapi-sequelize.git --tags"
+    "postpublish": "git push -f ssh://git@gitlab.youvolio.com:522/gapi/gapi-sequelize.git && git push --tags && git push ssh://git@gitlab.youvolio.com:522/gapi/gapi-sequelize.git --tags",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": {
     "name": "Kristian Tachev(Stradivario)",
@@ -27,9 +29,11 @@
   },
   "dependencies": {
     "sequelize": "^5.8.2",
-    "sequelize-typescript": "^1.0.0-beta.3"
+    "sequelize-typescript": "^1.0.0-beta.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@rxdi/core": "0.6.5"
-  }
+  },
+  "snyk": true
 }
